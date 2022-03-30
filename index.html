@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e80646ae69.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="aside">
+            <nav class="nav">
+
+                <div class="nav__expand">
+                    <i class="fa-solid fa-angle-right fa-2x"></i>
+                </div>
+                
+                <ul class="nav__list" id="sidebarMenu">
+                    <li class="nav__listitem">
+                        <a href="#">
+                            <i class="fa-solid fa-b"></i>
+                            <p>name <br>dummy</p>
+                        </a>
+                    </li>
+                    <li class="nav__listitem">
+                        <a href="#">
+                            <i class="fa-solid fa-users"></i>
+                            <p>Clients</p>
+                        </a>
+                    </li>
+                    <li class="nav__listitem">
+                        <a href="#">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <p>Search</p>
+                        </a>
+                    </li>
+                    <li class="nav__listitem">
+                        <a href="#">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <p>Status</p>
+                        </a>
+                    </li>
+                    <li class="nav__listitem">
+                        <div class="logout">
+                            <a href="#">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                <p>Logout</p>
+                            </a>
+                        </div>
+                    </li>     
+                </ul>      
+            </nav>
+        </div>
+        <div class="main">
+            <div class="leads">
+                <div class="leads-title">
+                    Most Leads
+                </div>
+                <div class="leads-details">
+                    <form>
+                        <div class="input">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" placeholder="Name">
+                        </div>
+                        <div class="input">
+                            <i class="fa fa-user-group"></i>
+                            <input type="text" placeholder="Pan">
+                        </div>
+                        <div class="input">
+                            <i class="fa fa-phone"></i>
+                            <input type="text" placeholder="Address">
+                        </div>
+                        <div class="input">
+                            <i class="fa fa-circle-nodes"></i>
+                            <input type="text" placeholder="Phone">
+                        </div>
+                        <div class="input">
+                            <i class="fa fa-circle-nodes"></i>
+                            <input type="text" placeholder="Email">
+                        </div>    
+                    </form>
+                </div>
+            </div>
+            <div class="income">
+                <div class="income-title">
+                    Types of income
+                </div>
+                <div class="income-details">
+                    <input type="checkbox" id="vehicle1" value="Bike">
+                    <label for="vehicle1"> I have a bike</label><br>
+    
+                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                    <label for="vehicle2"> I have a car</label><br>
+    
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label for="vehicle3"> I have a boat</label><br>
+    
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label for="vehicle1"> I have a bike</label><br>
+    
+                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                    <label for="vehicle2"> I have a car</label><br>
+                    
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label for="vehicle3"> I have a boat</label><br>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+<script>
+    let navExpand = document.querySelector(".nav__expand")
+    let nav = document.querySelector(".nav")
+
+    navExpand.addEventListener("click", () =>{
+        nav.classList.toggle("nav-closed");
+    })
+</script>
+</body>
+</html>

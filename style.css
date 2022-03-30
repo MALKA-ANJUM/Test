@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+.container{
+    display: flex;
+    
+}
+.nav{
+  
+    position: relative;
+    background: #333;
+    height: 100vh;
+    
+}
+.nav__expand{
+    width: 2rem;
+    height: 2rem;
+    fill: gray;
+    background: white;
+    box-shadow: 0px 0px 10px gray;
+    border-radius: 50%;
+    position: absolute;
+    right: -1rem;
+    top: 1rem;
+    z-index: 99;
+    cursor: 99;
+    cursor: pointer;
+    transform: rotatez(-180deg);
+    transition: transform 200ms ease-in-out;
+    text-align: center;
+}
+.nav__list{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav__listitem{
+    list-style: none;
+    transition: all 200ms ease-in;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+}
+.nav__listitem:nth-child(1) i{
+    background: red;
+    margin-bottom: 1em;
+}
+.nav__listitem a{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+.nav__listitem i{
+    color: gray;
+}
+.logout{
+    position: absolute;
+    bottom: 0;
+    transition: all 200ms ease-in;
+   
+    cursor: pointer;
+}
+.logout a{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+.logout i{
+    color: gray;
+}
+.nav-closed .nav__expand{
+    transform: rotatez(0deg);
+}
+.nav-closed .nav__listitem p{
+    display: none;
+}
+.nav-closed .nav__listitem i{
+    font-size: 1.5rem;
+}
+/* main */
+.main{
+    display: flex;
+    width: 100%;
+    margin: 1.5rem;
+   
+}
+
+.leads,
+.income{
+ 
+   margin: 0 auto;
+
+   height: max-content;
+   margin: 0 1rem;
+ 
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+   border-radius: 5px;
+}
+.leads-title,
+.income-title{
+    border-bottom: 1px solid #000;
+
+}
+
+.leads-details,
+.income-details{
+  padding: 1rem;
+}
+
+.leads-details .input{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  
+}
+
+input{
+    
+    border: none;
+   
+}
