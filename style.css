@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
+    list-style: none;
 }
 .container{
     display: flex;
@@ -19,9 +20,8 @@
 .nav__expand{
     width: 2rem;
     height: 2rem;
-    fill: gray;
-    background: white;
-    box-shadow: 0px 0px 10px gray;
+    background: rgb(83, 83, 83);
+    
     border-radius: 50%;
     position: absolute;
     right: -1rem;
@@ -32,21 +32,40 @@
     transform: rotatez(-180deg);
     transition: transform 200ms ease-in-out;
     text-align: center;
+    color: rgb(204, 204, 204);
+    
 }
 .nav__list{
     display: flex;
     flex-direction: column;
+    padding: 1em;
 }
 
 .nav__listitem{
-    list-style: none;
+   
     transition: all 200ms ease-in;
     padding: 1rem 1.5rem;
     cursor: pointer;
+   
 }
 .nav__listitem:nth-child(1) i{
-    background: red;
+    background: #7952B3;
+    color: #333;
     margin-bottom: 1em;
+    padding: 0.4em 0.6em;
+    border-radius: 10px;
+    
+}
+.nav__listitem:nth-child(1) p{
+    font-weight: 700;
+}
+.nav__listitem.item:hover{
+    background: rgba(206, 206, 206, 0.1);
+    border-radius: 10px;
+    
+}
+.nav__listitem:hover:not(1){
+    background: #fff;
 }
 .nav__listitem a{
     display: flex;
@@ -91,38 +110,64 @@
     display: flex;
     width: 100%;
     margin: 1.5rem;
-   
 }
-
+.leads{
+    width: 60%;
+}
+.income{
+    width: 40%;
+}
 .leads,
 .income{
- 
    margin: 0 auto;
-
    height: max-content;
    margin: 0 1rem;
- 
    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
    border-radius: 5px;
+   overflow: hidden;
 }
 .leads-title,
 .income-title{
-    border-bottom: 1px solid #000;
-
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-
+.leads-title p,
+.income-title p{
+    padding: 0.75em;
+    background: rgb(255, 250, 250);
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.4);
+}
 .leads-details,
 .income-details{
-  padding: 1rem;
+  padding: 0.5rem 1em;
 }
-
 .leads-details .input{
-    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-  
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+}
+.leads-details input{
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.4);
+    padding: 1em;
+}
+input{
+    border: none; 
+}
+.income-details label{
+    font-weight: 600;
+}
+.income-details li{
+    padding: 0.25em;
 }
 
-input{
-    
-    border: none;
-   
+@media screen and (max-width:700px){
+    .main{
+        flex-direction: column;
+    }
+    .leads{
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    .income{
+        width: 100%;
+    }
 }
